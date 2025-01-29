@@ -1,0 +1,361 @@
+@font-face {
+  font-family: seasons;
+  src: url("Fonts/The\ Seasons.ttf") format("truetype");
+}
+@font-face {
+  font-family: seasons-light;
+  src: url("Fonts/Fontspring-DEMO-theseasons-lt.otf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* General Reset */
+body,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+/* General Reset */
+body,
+h1,
+h2,
+p,
+a,
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5dc; /* Neutral Beige */
+  color: #2f4f4f; /* Charcoal Gray */
+  line-height: 1.6;
+  background-image: url("Assets/leafleft.png"), url("Assets/Leafright.png"),
+    url("Assets/programs-wavy.png");
+  background-position: -70px 750px, 103% 4%, -500px 1200px;
+  background-size: 30%, 17%, 100%;
+  background-repeat: no-repeat;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5f5dc; /* Neutral Beige */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth hide/show effect */
+  z-index: 1000;
+  filter: opacity(0.75);
+}
+
+.header.hidden {
+  transform: translateY(-100%); /* Slides header upwards */
+}
+.nav {
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.nav ul {
+  display: flex;
+}
+.nav ul li {
+  margin: 0 15px; /* Add spacing between items */
+}
+.nav a {
+  margin-right: 20px;
+  color: #2f4f4f;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #a7c7e7; /* Soft Pastel Blue */
+}
+
+.logo {
+  font-size: 28px;
+  font-family: "seasons-light";
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.logo a:visited {
+  color: inherit; /* Ensures the color remains the same for visited links */
+}
+.coaching {
+  display: flex;
+  margin: 10% 5%;
+  gap: 30px;
+  align-items: center;
+}
+
+.coaching-image {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Horizontally center the items */
+  align-items: center; /* Vertically center the items */
+}
+
+.coaching-image img {
+  height: 700px;
+  width: auto;
+  border-radius: 50px;
+}
+
+.coaching-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the items */
+  text-align: center;
+}
+
+.coaching-title h2 {
+  font-family: "Arima", serif;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.coaching-title h1 {
+  font-family: "Seasons", serif;
+  font-size: 70px;
+  line-height: 2;
+}
+
+.coaching-title p {
+  font-family: "Arima", serif;
+  font-size: 30px;
+  font-weight: 350;
+  text-align: center;
+}
+
+.register-now-button {
+  align-self: flex-start; /* Align the button to the start of the flex container */
+  margin-top: 30px;
+  background-color: #2f4f4f;
+  font-family: "Arima", serif;
+  color: #f5f5dc;
+  height: 50px;
+  width: 200px;
+  border: none;
+  border-radius: 25px;
+  align-self: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.register-now-button:hover {
+  height: 53px;
+  width: 210px;
+  font-size: 20px;
+  border-radius: 27px;
+}
+.session-details {
+  display: flex; /* Use flexbox to align the children */
+  flex-direction: column; /* Align items in a column */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  font-family: "Seasons", serif;
+  border-radius: 50px 50px 0px 0px;
+  filter: opacity(0.8);
+}
+
+.session-details h1 {
+  font-size: 2rem;
+  margin: 40px auto; /* Center margin for horizontal alignment */
+  font-family: "Seasons-Light", serif;
+  background-color: #f5f5dc;
+  width: 300px; /* Adjust width to fit content */
+  text-align: center;
+  border-radius: 30px;
+  color: #2f4f4f;
+}
+
+.detail-card-section {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  gap: 20px; /* Space between cards */
+  justify-content: space-evenly; /* Evenly space cards horizontally */
+  margin-top: 4%;
+  width: 100%; /* Ensure the section takes full width */
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.detail-card {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 10px; /* Space between h2 and p */
+  font-family: "Arima", serif;
+  background-color: #f5f5dc;
+  border-radius: 50px;
+  filter: opacity(0.8);
+  height: 200px;
+  width: 300px;
+  text-align: center; /* Center-align the text */
+  padding: 20px;
+  color: #2f4f4f;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+.program-details {
+  background-color: rgba(246, 232, 168, 0.8);
+  border-radius: 50px 50px 0px 0px;
+}
+.how-it-works {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-family: "Seasons-light", serif;
+}
+
+.how-it-works h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.step-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2e3e3f;
+  min-width: 60px;
+  text-align: right;
+  font-family: "Anton", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+.step-content {
+  flex: 1;
+  border-left: 2px solid #2e3e3f;
+  padding-left: 20px;
+  font-family: "Arima", serif;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer {
+  background-color: #2f4f4f;
+  color: #f5f5dc; /* Neutral beige */
+  padding: 40px 20px;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures wrapping for smaller screens */
+  gap: 20px;
+}
+
+.footer-left h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  font-family: "seasons-light";
+}
+
+.footer-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-left ul li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-left: 70px;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.footer-left ul li a:visited {
+  color: inherit;
+}
+.footer-right {
+  justify-content: center;
+  margin-right: 90px;
+}
+.footer-right h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: "seasons";
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  width: 50px; /* Adjust the width */
+  height: 50px; /* Adjust the height */
+  background-size: contain; /* Ensures the logo fits within the box */
+  background-repeat: no-repeat; /* Prevents tiling of the logo */
+  background-position: center; /* Centers the logo */
+}
+
+.copyright {
+  text-align: center;
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Responsive Footer Adjustments */
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .detail-card-section {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center; /* Center cards horizontally */
+  }
+
+  .detail-card {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
