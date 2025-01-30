@@ -315,6 +315,9 @@ body {
   justify-content: center;
   margin-right: 90px;
 }
+.footer a {
+  color: #2f4f4f;
+}
 .footer-right h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
