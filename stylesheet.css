@@ -214,6 +214,55 @@ body {
   justify-content: center;
   max-width: 100%;
 }
+.about-video {
+  height: 800px;
+  width: auto;
+  border-radius: 100px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+.intro-text button{
+  height: 50px;
+  width: 150px;
+  background-color: #2f4f4f;
+  color: #f5f5dc;
+  font-size: 18px;
+  margin-top: 30px;
+  border-radius: 25px;
+  border: none;
+  font-family: "Arima", serif;
+  cursor: pointer;
+}
+.intro-text button {
+  align-self: flex-start; /* Align the button to the start of the flex container */
+  margin-top: 30px;
+  background-color: #2f4f4f;
+  font-family: "Arima", serif;
+  color: #f5f5dc;
+  height: 50px;
+  width: 200px;
+  border: none;
+  border-radius: 25px;
+  align-self: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.intro-text button a {
+  color: #f5f5dc;
+  text-decoration: none;
+}
+.intro-text button a:visited {
+  color: inherit;
+}
+.intro-text button:hover {
+  height: 53px;
+  width: 210px;
+  font-size: 20px;
+  border-radius: 27px;
+}
 .testimonials {
   justify-content: center;
   align-items: center;
@@ -327,6 +376,7 @@ body {
   text-align: center;
   margin: 50px auto 0px auto;
   width: 400px;
+  font-family: "Arima", serif;
 }
 
 .intro-text p {
@@ -372,7 +422,7 @@ body {
   font-style: normal;
 }
 .footer a {
-  color: #2f4f4f;
+  color: #f5f5dc;
 }
 .footer-left ul li a:visited {
   color: inherit;

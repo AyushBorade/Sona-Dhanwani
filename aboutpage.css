@@ -76,6 +76,7 @@ body {
 }
 .nav ul li {
   margin: 0 15px; /* Add spacing between items */
+  font-family: "Arima", serif;
 }
 .nav a {
   margin-right: 20px;
@@ -96,6 +97,10 @@ body {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+.logo a {
+  color: inherit;
+  text-decoration: none;
 }
 .logo a:visited {
   color: inherit; /* Ensures the color remains the same for visited links */
@@ -126,8 +131,8 @@ body {
   max-width: 500px;
   display: inline-block;
 }
-.about-image {
-  height: 700px;
+.about-video {
+  height: 800px;
   width: auto;
   border-radius: 100px;
   display: inline-block;
@@ -135,6 +140,16 @@ body {
   justify-content: center;
   max-width: 100%;
 }
+.about-image {
+  height: 800px;
+  width: auto;
+  border-radius: 100px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
 /* Footer Styles */
 .footer {
   background-color: #2f4f4f;
@@ -175,7 +190,7 @@ body {
   color: inherit;
 }
 .footer a {
-  color: #2f4f4f;
+  color: #f5f5dc;
 }
 .footer-right {
   justify-content: center;
