@@ -128,6 +128,7 @@ body {
   letter-spacing: 1.7px;
   line-height: 110px;
 }
+
 .tagline {
   font-size: 40px;
 }
@@ -222,18 +223,6 @@ body {
   align-items: center;
   justify-content: center;
   max-width: 100%;
-}
-.intro-text button{
-  height: 50px;
-  width: 150px;
-  background-color: #2f4f4f;
-  color: #f5f5dc;
-  font-size: 18px;
-  margin-top: 30px;
-  border-radius: 25px;
-  border: none;
-  font-family: "Arima", serif;
-  cursor: pointer;
 }
 .intro-text button {
   align-self: flex-start; /* Align the button to the start of the flex container */
@@ -346,7 +335,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px 20px;
   gap: 130px;
   flex-wrap: wrap;
   padding: 100px 20px;
@@ -368,7 +356,7 @@ body {
   font-family: "seasons-light";
   font-weight: 700px;
 }
-.ws-title p {
+.ws-title h2 {
   font-size: 35px;
   background-color: #2f4f4f;
   color: #f5f5dc;
@@ -394,26 +382,31 @@ body {
 }
 
 .footer-content {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; /* Ensures wrapping for smaller screens */
-  gap: 20px;
+  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-.footer-left h2 {
+.col1 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   margin-left: 50px;
   font-family: "seasons-light";
 }
+.col2 {
+  grid-row: span 2 / span 2;
+}
 
-.footer-left ul {
+.col1 ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-left ul li {
+.col1 ul li {
   margin-bottom: 10px;
   font-size: 1.2rem;
   margin-left: 70px;
@@ -424,19 +417,23 @@ body {
 .footer a {
   color: #f5f5dc;
 }
-.footer-left ul li a:visited {
+.col1 ul li a:visited {
   color: inherit;
 }
-.footer-right {
+.col3 {
   justify-content: center;
-  margin-right: 90px;
+
+  grid-row: span 2 / span 2;
 }
-.footer-right h3 {
+.col3 h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
   font-family: "seasons";
 }
 
+.col1 {
+  grid-row: span 2 / span 2;
+}
 .social-icons {
   display: flex;
   gap: 20px;
@@ -457,7 +454,6 @@ body {
   font-style: normal;
 }
 
-/* Responsive Footer Adjustments */
 @media screen and (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -473,5 +469,168 @@ body {
 
   .card {
     width: 90%;
+  }
+  .hero {
+    height: auto;
+    margin: 25% 3% 2% 3%;
+  }
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  .logo {
+    font-size: 1.3rem;
+  }
+  .hero {
+    height: auto;
+    margin: 25% 3% 2% 3%;
+  }
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  .body {
+    background-image: url("Assets/leafleft.png"), url("Assets/Leafright.png"),
+      url("Assets/wavy.png");
+    background-position: -10% 8%, 110% 2%, -520px 770px;
+    background-size: 25%, 40%, 130%;
+  }
+
+  .hero-title span {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+  }
+
+  .background-circle {
+    position: absolute;
+    top: 30%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjusts to perfect center */
+    width: 400px; /* Adjust size as needed */
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 223, 76, 1) 0%,
+      rgba(255, 233, 153, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    filter: blur(40px);
+    animation: pulse 3s infinite;
+    z-index: 1; /* Places it behind the content */
+  }
+
+  .header {
+    padding: 10px 10px;
+  }
+  .nav ul li {
+    font-family: "Arima", serif;
+    margin: 0 3px; /* Add spacing between items */
+  }
+  .nav a {
+    margin-right: 20px;
+    color: #2f4f4f;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+  }
+  .about-image {
+    height: auto;
+    width: auto;
+    border-radius: 100px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .intro-text p {
+    font-size: 1.13rem;
+  }
+  .intro-text h2 {
+    font-size: 2.3rem;
+  }
+  .intro {
+    padding: 30px 5%;
+  }
+  .About {
+    padding: 30px 5%;
+  }
+  .about-video {
+    height: auto;
+    width: auto;
+    border-radius: 40px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .testimonials {
+    padding: 20px 20px;
+  }
+  .stars-left-stars img {
+    height: 30px;
+    margin-top: 10px;
+  }
+  .stars-right-stars img {
+    height: 30px;
+    margin-top: 10px;
+  }
+  .certifi-head h2 {
+    font-size: 1.5rem;
+  }
+  .card-block img {
+    height: 20px;
+  }
+  .card {
+    width: 100%;
+    max-width: 500px;
+  }
+  .workshop {
+    padding: 20% 5% 5% 5%;
+    gap: 50px;
+  }
+  .ws-title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: auto;
+    background-color: #2f4f4f;
+    color: #f5f5dc;
+    margin: 15% 10% 0% 10%;
+    border-radius: 25px;
+  }
+  .ws-title h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .workshop-image {
+    height: 500px;
+  }
+  .workshop-title h2 {
+    font-size: 3rem;
+  }
+  .hero-title {
+    font-size: 46px;
+    line-height: 70px;
+  }
+  .tagline {
+    font-size: 25px;
+  }
+  .footer-left h2 {
+    margin-left: 0;
+  }
+  .footer-left ul li {
+    margin-left: 0;
+  }
+  .footer-right {
+    margin-right: 0;
+  }
+  .footer-right h3 {
+    margin-bottom: 10px;
+  }
+  .footer {
+    padding: 20px 10px;
   }
 }

@@ -40,10 +40,10 @@ body {
   background-color: #f5f5dc; /* Neutral Beige */
   color: #2f4f4f; /* Charcoal Gray */
   line-height: 1.6;
-  background-image: url("Assets/leafleft.png"),
-    url("Assets/about-left-leaf.png"), url("Assets/wavy-about.png");
-  background-position: -10% 0%, 110% 40vw, -650px 1110px;
-  background-size: 25%, 25%, 105%;
+  background-image: url("Assets/leafleft.png"), url("Assets/Leafright.png"),
+    url("Assets/wavy.png");
+  background-position: -10% 8%, 110% 2%, -520px 770px;
+  background-size: 25%, 25%, 130%;
   background-repeat: no-repeat;
 }
 
@@ -62,6 +62,9 @@ body {
   z-index: 1000;
   filter: opacity(0.75);
 }
+.header a {
+  color: #2f4f4f;
+}
 
 .header.hidden {
   transform: translateY(-100%); /* Slides header upwards */
@@ -75,8 +78,8 @@ body {
   display: flex;
 }
 .nav ul li {
-  margin: 0 15px; /* Add spacing between items */
   font-family: "Arima", serif;
+  margin: 0 15px; /* Add spacing between items */
 }
 .nav a {
   margin-right: 20px;
@@ -99,58 +102,74 @@ body {
   cursor: pointer;
 }
 .logo a {
-  color: inherit;
-  text-decoration: none;
+  color: #2f4f4f;
 }
 .logo a:visited {
   color: inherit; /* Ensures the color remains the same for visited links */
 }
-.intro-text {
-  max-width: 500px;
-}
-.intro-text h2 {
-  font-size: 60px;
-  margin-bottom: 20px;
+
+.Heading {
   font-family: "seasons-light";
-  font-weight: 700px;
+  margin: 5% 5% 10% 5%;
 }
-.intro-text p {
-  font-size: 20px;
-  color: #2f4f4f;
-  letter-spacing: 1.2px;
+.Heading h1 {
+  font-family: "seasons";
+  font-weight: 600;
+  font-size: 50px;
+  text-align: center;
 }
-.About {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px 20px;
-  gap: 130px;
-  flex-wrap: wrap;
-}
-.about-info {
-  max-width: 500px;
-  display: inline-block;
-}
-.about-video {
-  height: 800px;
-  width: auto;
-  border-radius: 100px;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-}
-.about-image {
-  height: 800px;
-  width: auto;
-  border-radius: 100px;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
+.Heading h3 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 23px;
+  letter-spacing: 0.8px;
 }
 
-/* Footer Styles */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 40px;
+  margin: 0% 8% 10% 8%;
+  font-family: "seasons";
+}
+.card-block {
+  grid-row: span 14 / span 10;
+  background-color: #f9e79f;
+  border-radius: 25px;
+}
+.content {
+  padding: 10px 15px 10px 15px;
+}
+.bg {
+  display: flex;
+  max-width: 100%;
+  max-height: 50%;
+  height: 50%;
+  background-color: #2f4f4f;
+  border-radius: 25px 25px 0px 0px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.bg img {
+  height: 100px;
+}
+.card-block h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 1%;
+}
+.card-block h3 {
+  font-family: "Arima", serif;
+  color:#2f4f4f;
+  font-size: 18px;
+}
+.card-block p {
+  font-size: 17px;
+  margin-top: 8px;
+  font-family: "Arima",serif;
+}
 .footer {
   background-color: #2f4f4f;
   color: #f5f5dc; /* Neutral beige */
@@ -159,26 +178,31 @@ body {
 }
 
 .footer-content {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; /* Ensures wrapping for smaller screens */
-  gap: 20px;
+  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-.footer-left h2 {
+.col1 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   margin-left: 50px;
   font-family: "seasons-light";
 }
+.col2 {
+  grid-row: span 2 / span 2;
+}
 
-.footer-left ul {
+.col1 ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-left ul li {
+.col1 ul li {
   margin-bottom: 10px;
   font-size: 1.2rem;
   margin-left: 70px;
@@ -186,22 +210,26 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-.footer-left ul li a:visited {
-  color: inherit;
-}
 .footer a {
   color: #f5f5dc;
 }
-.footer-right {
-  justify-content: center;
-  margin-right: 90px;
+.col1 ul li a:visited {
+  color: inherit;
 }
-.footer-right h3 {
+.col3 {
+  justify-content: center;
+
+  grid-row: span 2 / span 2;
+}
+.col3 h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
   font-family: "seasons";
 }
 
+.col1 {
+  grid-row: span 2 / span 2;
+}
 .social-icons {
   display: flex;
   gap: 20px;
@@ -221,43 +249,10 @@ body {
   font-weight: 300;
   font-style: normal;
 }
-.mission {
-  font-family: "Arima", serif;
-  font-size: 23px;
-  text-align: center;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 30px 50px;
-}
-.intro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 130px;
-  flex-wrap: wrap;
-  padding: 20px 20px;
-}
-.got-here {
-  position: relative;
-  padding: 25px 128px 0px 100px;
-  text-align: right;
-}
-.got-here p {
-  font-size: 5rem; /* Large, elegant text */
-  color: #2f4f4f; /* Dark green shade */
-  margin: 0;
-  padding: 0 0px 0px 0; /* Add padding for spacing */
-  font-family: "seasons", serif;
-}
-
-/* Responsive Footer Adjustments */
 @media screen and (max-width: 768px) {
   .footer-content {
     flex-direction: column;
     text-align: center;
-  }
-  .social-icons {
-    justify-content: center;
   }
   .header {
     padding: 10px 10px;
@@ -273,57 +268,6 @@ body {
     font-size: 0.8rem;
     transition: color 0.3s ease;
   }
-  .logo {
-    font-size: 1.3rem;
-  }
-  .About {
-    gap: 50px;
-  }
-  .About h2 {
-    text-align: center;
-    font-size: 3rem;
-  }
-  .About p {
-    font-size: 1rem;
-  }
-  .About img {
-    width: 100%;
-    height: auto;
-  }
-  .mission {
-    margin: 0 4%;
-    font-size: 1.35rem;
-    padding: 40px 20px;
-    line-height: 1.7;
-    background-color: #2f4f4f;
-    color: #f5f5dc;
-    border-radius: 50px;
-  }
-  .got-here {
-    padding: 45px 0px 0px 0px;
-    text-align: center;
-  }
-  .got-here p {
-    font-size: 3rem; /* Large, elegant text */
-    color: #2f4f4f; /* Dark green shade */
-    margin: 0;
-    padding: 0 0px 0px 0; /* Add padding for spacing */
-    font-family: "seasons", serif;
-  }
-  .intro {
-    gap: 50px;
-  }
-  .intro-text p {
-    font-size: 1rem;
-  }
-  .intro img {
-    width: 100%;
-    height: auto;
-  }
-  .footer-content {
-    margin: 0 0 0 0;
-    align-self: auto;
-  }
   .footer-left h2 {
     margin-left: 0;
   }
@@ -332,5 +276,14 @@ body {
   }
   .footer-right {
     margin-right: 0;
+  }
+  .footer-right h3 {
+    margin-bottom: 10px;
+  }
+  .footer {
+    padding: 20px 10px;
+  }
+  .social-icons {
+    justify-content: center;
   }
 }
