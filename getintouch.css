@@ -240,6 +240,14 @@ button {
   font-weight: 800;
   color: #f5f5dc;
 }
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 1600px;
+}
 
 @media screen and (max-width: 768px) {
   .footer-content {

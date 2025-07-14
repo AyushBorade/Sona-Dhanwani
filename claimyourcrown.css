@@ -1,0 +1,337 @@
+@font-face {
+  font-family: seasons;
+  src: url("Fonts/The\ Seasons.ttf") format("truetype");
+}
+@font-face {
+  font-family: seasons-light;
+  src: url("Fonts/Fontspring-DEMO-theseasons-lt.otf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* General Reset */
+body,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f9e79f; /* Neutral Beige */
+  color: #2f4f4f; /* Charcoal Gray */
+  line-height: 1.6;
+  background-image: url("Assets/leafleft.png"),
+    url("Assets/about-left-leaf.png"), url("Assets/wavy-about.png");
+  background-position: -10% 0%, 110% 40vw, -650px 1110px;
+  background-size: 25%, 25%, 105%;
+  background-repeat: no-repeat;
+  font-family: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5f5dc; /* Neutral Beige */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth hide/show effect */
+  z-index: 1000;
+  filter: opacity(0.75);
+}
+
+.header.hidden {
+  transform: translateY(-100%); /* Slides header upwards */
+}
+.nav {
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.nav ul {
+  display: flex;
+}
+.nav ul li {
+  margin: 0 15px; /* Add spacing between items */
+  font-family: "Arima", serif;
+}
+.nav a {
+  margin-right: 20px;
+  color: #2f4f4f;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #a7c7e7; /* Soft Pastel Blue */
+}
+
+.logo {
+  font-size: 28px;
+  font-family: "seasons-light";
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.logo a {
+  color: inherit;
+  text-decoration: none;
+}
+.logo a:visited {
+  color: inherit; /* Ensures the color remains the same for visited links */
+}
+
+.container {
+  max-width: 80%;
+  margin: 60px auto;
+
+  border-radius: 18px;
+  padding: 40px 24px 32px 24px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "seasons";
+  letter-spacing: 0.2ch;
+}
+
+h1 {
+  font-size: 2.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 0.2em;
+  color: #2f4f4f;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #2f4f4f;
+  margin-bottom: 0.5em;
+}
+
+section {
+  margin-bottom: 3.5em;
+  padding: 2.5em 1.2em 2.5em 1.2em;
+  border-radius: 12px;
+  background: #fff9e3;
+  box-shadow: 0 1px 8px rgba(176, 141, 87, 0.04);
+  position: relative;
+  color: #2f4f4f;
+  font-family: "Arima", serif;
+}
+
+section:not(:last-child)::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60%;
+  margin: 2.5em auto 0 auto;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #a9dfbf 0%, #f9e79f 100%);
+  opacity: 0.7;
+}
+
+section.intro {
+  background: #f5f5dc;
+  border-left: 5px solid #a9dfbf;
+  color: #2f4f4f;
+}
+
+section.cta {
+  text-align: center;
+  background: #fff9e3;
+  border-radius: 12px;
+  padding: 2.5em 1em 2em 1em;
+  box-shadow: 0 2px 12px rgba(176, 141, 87, 0.08);
+  color: #2f4f4f;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #2f4f4f;
+  margin-bottom: 0.7em;
+  font-weight: 700;
+}
+
+ul {
+  padding-left: 1.2em;
+  margin: 0.5em 0 0.5em 0;
+  color: #2f4f4f;
+}
+
+ul li {
+  margin-bottom: 0.7em;
+  line-height: 1.6;
+  font-size: 1.08rem;
+  color: #2f4f4f;
+}
+
+.features {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features li {
+  background: #fff9e3;
+  border-left: 4px solid #a9dfbf;
+  margin-bottom: 1.1em;
+  padding: 1em 1em 1em 1.5em;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px rgba(176, 141, 87, 0.07);
+  color: #2f4f4f;
+}
+
+blockquote {
+  background: #fff9e3;
+  border-left: 4px solid #a9dfbf;
+  margin: 1em 0;
+  padding: 1em 1.2em;
+  font-style: italic;
+  color: #2f4f4f;
+  border-radius: 7px;
+}
+
+.highlight {
+  color: #2f4f4f;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.final {
+  font-size: 1.1rem;
+  color: #2f4f4f;
+  margin-top: 1.2em;
+  font-weight: 600;
+}
+
+button,
+.cta-btn {
+  background: #f9e79f;
+  color: #2f4f4f;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8em 2em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(176, 141, 87, 0.07);
+  transition: background 0.2s;
+}
+button:hover,
+.cta-btn:hover {
+  background: #a9dfbf;
+}
+
+.footer {
+  background-color: #2f4f4f;
+  color: #f5f5dc; /* Neutral beige */
+  padding: 40px 20px;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures wrapping for smaller screens */
+  gap: 20px;
+}
+
+.footer-left h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  font-family: "seasons-light";
+  color: #f5f5dc;
+}
+
+.footer-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-left ul li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-left: 70px;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f5f5dc;
+}
+.footer-left ul li a:visited {
+  color: inherit;
+}
+.footer a {
+  color: #f5f5dc;
+}
+.footer-right {
+  justify-content: center;
+  margin-right: 90px;
+}
+.footer-right h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: "seasons";
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  width: 50px; /* Adjust the width */
+  height: 50px; /* Adjust the height */
+  background-size: contain; /* Ensures the logo fits within the box */
+  background-repeat: no-repeat; /* Prevents tiling of the logo */
+  background-position: center; /* Centers the logo */
+}
+
+.copyright {
+  text-align: center;
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@media (max-width: 1100px) {
+  .container {
+    max-width: 98vw;
+    padding: 18px 2vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 18px 6vw;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  section {
+    padding: 1.2em 0.5em;
+  }
+  section:not(:last-child)::after {
+    margin: 1.2em auto 0 auto;
+  }
+}
