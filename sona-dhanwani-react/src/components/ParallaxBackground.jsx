@@ -75,58 +75,30 @@ function ParallaxBackground({ variant = 'home' }) {
 
     return (
         <div className="parallax-container" style={{ backgroundColor: config.bgColor }}>
-            {/* Left side leaves - staggered positioning */}
+            {/* Left side leaf - 1x pace (using 0.2 coefficient) */}
             <div
-                className="parallax-layer left-leaf left-leaf-1"
+                className="parallax-layer left-leaf"
                 style={{
                     backgroundImage: `url(${config.leftLeaf})`,
-                    transform: `translate3d(0, ${scrollY * 0.08}px, 0)` // GPU accelerated
-                }}
-            />
-            <div
-                className="parallax-layer left-leaf left-leaf-2"
-                style={{
-                    backgroundImage: `url(${config.leftLeaf})`,
-                    transform: `translate3d(0, ${scrollY * 0.18}px, 0)`
-                }}
-            />
-            <div
-                className="parallax-layer left-leaf left-leaf-3"
-                style={{
-                    backgroundImage: `url(${config.leftLeaf})`,
-                    transform: `translate3d(0, ${scrollY * 0.12}px, 0) rotate(25deg)` // Rotated bottom leaf
+                    transform: `translate3d(0, ${scrollY * 0.2}px, 0)` // 1x pace
                 }}
             />
 
-            {/* Right side leaves - staggered positioning */}
+            {/* Right side leaf - 1.5x pace (using 0.3 coefficient) */}
             <div
-                className="parallax-layer right-leaf right-leaf-1"
+                className="parallax-layer right-leaf"
                 style={{
                     backgroundImage: `url(${config.rightLeaf})`,
-                    transform: `translate3d(0, ${scrollY * 0.05}px, 0)`
-                }}
-            />
-            <div
-                className="parallax-layer right-leaf right-leaf-2"
-                style={{
-                    backgroundImage: `url(${config.rightLeaf})`,
-                    transform: `translate3d(0, ${scrollY * 0.22}px, 0)`
-                }}
-            />
-            <div
-                className="parallax-layer right-leaf right-leaf-3"
-                style={{
-                    backgroundImage: `url(${config.rightLeaf})`,
-                    transform: `translate3d(0, ${scrollY * 0.15}px, 0) rotate(-20deg)` // Rotated bottom leaf
+                    transform: `translate3d(0, ${scrollY * 0.3}px, 0)` // 1.5x pace
                 }}
             />
 
-            {/* Wavy background - very subtle movement */}
+            {/* Wavy background */}
             <div
                 className="parallax-layer wavy-bg"
                 style={{
                     backgroundImage: `url(${config.wavy})`,
-                    transform: `translate3d(0, ${scrollY * 0.03}px, 0)`
+                    transform: `translate3d(0, ${-scrollY * 0.05}px, 0)` // Move up slightly or stay put to avoid top gap
                 }}
             />
         </div>
